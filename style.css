@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background-color: white;
+    padding: 15px 0;
+    position: fixed;
+    /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Adds a shadow for visibility */
+    z-index: 1000;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        font-size: 22px;
+        padding: 10px 0;
+
+    }
+
+    .main-container {
+        margin-top: 10px;
+    }
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+.contact-info,
+.form-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-info div {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+    }
+}
